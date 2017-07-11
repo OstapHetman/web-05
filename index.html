@@ -26,15 +26,24 @@
 
     <script>
         function initMap() {
+            // Map options
             var options = {
-                zoom: 8,
-                center: {
-                    lat: 49.85,
-                    lng: 24.0166666667
+                    zoom: 10,
+                    center: {
+                        lat: 49.85,
+                        lng: 24.0166666667
+                    }
                 }
-            }
-
+                // New map
             var map = new google.maps.Map(document.getElementById('map'), options);
+            //ADD marker 
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: 49.8184186,
+                    lng: 23.9718059
+                },
+                map: map
+            });
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7Z7Np_xLpxnJCOQtQJtv4c0ykTDuTIGI&callback=initMap">
